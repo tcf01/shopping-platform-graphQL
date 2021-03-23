@@ -1,0 +1,11 @@
+.products-wrapper .products {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  position: relative;
+}
+.products-wrapper .page-pagination-wrapper {
+  display: flex;
+  justify-content: center;
+  align-content: center;
+}

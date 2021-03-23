@@ -1,0 +1,90 @@
+@import url("https://fonts.googleapis.com/css2?family=Lobster+Two:ital,wght@1,700&display=swap");
+.homepage-wrapper .homepage-inner-content .category-header {
+  font-weight: 900;
+  font-size: 28px;
+  text-align: center;
+}
+.homepage-wrapper .homepage-inner-content .banner-section {
+  background-image: url("../../assets/img/homepage-banner.jpg");
+  background-size: cover;
+  width: 100vw;
+  height: 100vh;
+  position: relative;
+}
+.homepage-wrapper .homepage-inner-content .banner-section .message-section {
+  position: absolute;
+  width: 560px;
+  top: 25%;
+  left: 10%;
+  font-family: "Lobster Two", cursive;
+}
+.homepage-wrapper .homepage-inner-content .banner-section .message-section .message {
+  font-size: 90px;
+  color: #757575;
+}
+.homepage-wrapper .homepage-inner-content .banner-section .message-section .button-group {
+  padding: 30px;
+  width: 260px;
+}
+.homepage-wrapper .homepage-inner-content .banner-section .message-section .button-group .start-button {
+  font-size: 24px;
+  border: solid 3px black;
+  border-radius: 30px;
+  animation: GradientBorder 3s ease infinite;
+}
+.homepage-wrapper .homepage-inner-content .features {
+  display: flex;
+  padding: 50px 15px;
+  flex-direction: column;
+}
+.homepage-wrapper .homepage-inner-content .features .detail {
+  display: flex;
+  padding: 30px;
+}
+.homepage-wrapper .homepage-inner-content .features .detail div[class$=-section] {
+  padding: 10px;
+  cursor: pointer;
+}
+.homepage-wrapper .homepage-inner-content .features .detail div[class$=-section] .sub-header {
+  font-size: larger;
+  font-weight: 800;
+}
+.homepage-wrapper .homepage-inner-content .features .detail .food-section {
+  width: 50%;
+  transition: 0.5s;
+}
+.homepage-wrapper .homepage-inner-content .features .detail .food-section:hover {
+  width: 80%;
+}
+.homepage-wrapper .homepage-inner-content .features .detail .food-section img {
+  width: 100%;
+}
+.homepage-wrapper .homepage-inner-content .features .detail .clothing-section img {
+  width: 98%;
+}
+.homepage-wrapper .homepage-inner-content .features .detail .image-wrapper {
+  width: 100%;
+  height: 100%;
+}
+
+/* 
+.css-selector {
+    background: linear-gradient(99deg, #433fe1, #ce51f3);
+    background-size: 400% 400%;
+
+    animation: GradientBorder;
+}
+
+@keyframes GradientBorder {
+    0% {
+        border-color: 71% 0%
+    }
+
+    50% {
+        border-color: 30% 100%
+    }
+
+    100% {
+        border-color: 71% 0%
+    }
+} */

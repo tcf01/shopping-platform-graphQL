@@ -1,0 +1,101 @@
+$title-font-size:23px;
+
+.section-layout {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+
+.footer-wrapper {
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-start;
+    color: white;
+
+    background-color: #282828;
+    padding: 30px 55px;
+    height: 300px;
+    width: 100%;
+
+    .social-media-section {
+        height: 40%;
+
+        .title {
+            font-size: $title-font-size;
+        }
+
+        .images {
+            cursor: pointer;
+
+            svg {
+                margin: 5px;
+                width: 40px;
+                height: 40px;
+                padding: 10px;
+                border-radius: 100%;
+                background-color: #DD525C;
+                fill: white;
+            }
+        }
+    }
+
+    .promotion-section {
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: flex-start;
+
+        .subscription {
+            height: 40%;
+
+            .input-section {
+                width: 100%;
+                display: flex;
+                justify-content: space-between;
+
+                input {
+                    width: 73%;
+                    border-radius: 30px;
+                    padding: 10px;
+                }
+
+                .btn.btn-primary {
+                    border-radius: 50px;
+                    background-color: #DD525C;
+                    border: none;
+
+                    &:focus {
+                        outline: none;
+                    }
+                }
+            }
+        }
+
+        .title {
+            font-size: $title-font-size;
+        }
+
+        .support-payments {
+            height: 40%;
+
+            .images {
+                display: flex;
+                align-items: center;
+                width: 100%;
+                height: 100%;
+
+                svg {
+                    background-color: white;
+                    border-radius: 5px;
+                    margin: 0px 5px;
+                    padding: 5px;
+                    width: 66px;
+                    height: 42px;
+                }
+            }
+        }
+    }
+}

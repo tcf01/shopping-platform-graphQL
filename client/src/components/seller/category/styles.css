@@ -1,0 +1,16 @@
+.category-section-content {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+.category-section-content .category-item {
+  width: 50%;
+  cursor: pointer;
+  transition: 0.2s;
+}
+.category-section-content .category-item:hover {
+  transform: scale(1.3);
+}
+.category-section-content .category-item .content {
+  padding: 10px;
+}

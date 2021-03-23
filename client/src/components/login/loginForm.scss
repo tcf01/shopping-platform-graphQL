@@ -1,0 +1,77 @@
+.role-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100px;
+
+    .role-header {
+        font-weight: 600;
+        text-align: center;
+        font-size: 30px;
+    }
+
+    .role-inner-wrapper {
+        width: 100%;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        height: 30px;
+        margin-top: 10px;
+
+
+        .buyer,
+        .seller {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+            height: 100%;
+            border-radius: 5px;
+        }
+
+        .isActive {
+            background-color: black;
+            color: white;
+            transition: background-color 0.3s;
+        }
+    }
+}
+
+.form-submission-section {
+    padding-top: 10px;
+    height: 200px;
+    text-align: center;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+
+    .input-section {
+        display: flex;
+        flex-direction: column;
+
+        input {
+            padding: 5px;
+            margin: 5px 0px;
+            min-height: 38px;
+            border-radius: 5px;
+            background-color: transparent;
+            border: solid 1px #999;
+        }
+    }
+
+    input[type="submit"] {
+        width: 80%;
+        height: 30px;
+        background-color: red;
+        border: none;
+        color: white;
+        border-radius: 50px;
+        line-height: normal !important;
+    }
+}
+
+.register-form{
+    font-weight: 800;
+}

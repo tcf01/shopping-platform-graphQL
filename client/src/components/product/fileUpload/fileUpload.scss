@@ -1,0 +1,12 @@
+.dropzone {
+    border: dashed 1px black;
+    padding: 30px;
+    text-align: center;
+    background-color: rgb(223, 223, 223);
+    height: 100px;
+    width: 90%;
+
+    &:focus {
+        outline: none;
+    }
+}

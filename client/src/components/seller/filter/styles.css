@@ -1,0 +1,23 @@
+.filter-section-wrapper {
+  border: 1px solid #b3aeae;
+  border-radius: 10px;
+  overflow: hidden;
+  display: flex;
+  justify-content: space-around;
+  width: 250px;
+}
+.filter-section-wrapper .filter-button {
+  cursor: pointer;
+  width: 100%;
+  font-size: 12px;
+  text-align: center;
+  border: solid 1px black;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: 0.2s;
+}
+.filter-section-wrapper .filter-button.isActive {
+  background: rgba(200, 200, 200, 0.5);
+  color: black;
+}

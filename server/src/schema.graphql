@@ -1,0 +1,157 @@
+scalar Upload
+
+type Query {
+    getAllProducts: [Product!]!
+    getProductsByUser(
+        userId: String!
+        category: String!
+        filter: Filter
+    ): Testing
+    specificProduct(skuId: String): Product!
+    reviews(skuId: ID!): [Review!]!
+    user(username: String!, password: String!): User
+    authenticateUserLogin(token: String!): User!
+}
+
+input Filter {
+    createdAt: Int
+    sales: Int
+    price: Int
+}
+
+type Testing {
+    products: [Product!]!
+    extraInfo: ExtraInfo
+}
+
+type Mutation {
+    addProduct(data: ProductInput): Product!
+    editProduct(data: ProductInput): Product!
+    deleteProduct(skuId: ID): Product!
+    addReview(skuId: ID!, data: AddReviewInput): Review!
+    deleteReview(reviewId: ID!): Boolean!
+    uploadFile(file: Upload!): File!
+
+    register(registerData: RegisterData!): User!
+    login(username: String!, password: String!, role: String!): LoginUser!
+
+    payWithCreditCardStripe(
+        userId: String!
+        stripeToken: String!
+        checkoutProduct: [CheckoutProduct!]!
+    ): User!
+}
+
+# directive @UserRole(
+#     requires: Role = ADMIN,
+# ) on  FIELD_DEFINITION
+
+# enum Role {
+#     ADMIN
+#     BUYER
+#     SELLER
+#     GUEST
+# }
+
+input CheckoutProduct {
+    name: String!
+    skuId: String!
+    description: String!
+    price: Int!
+    number: Int!
+}
+
+type ExtraInfo {
+    category: [String]!
+}
+
+type File {
+    id: ID!
+    path: String!
+    isMain: Boolean
+    filename: String!
+    mimetype: String!
+    encoding: String!
+}
+
+type LoginUser {
+    userInfo: User
+    token: String!
+}
+
+type Order {
+    isPaid: Boolean!
+    products: [Product]!
+}
+
+type User {
+    _id: ID!
+    username: String!
+    password: String!
+    email: String!
+    role: String!
+    userId: String!
+    stripeId: String!
+    order: [Order]!
+    isActive: Boolean!
+}
+
+type ProductOwner {
+    _id: ID!
+    username: String
+}
+
+type Image {
+    _id: ID!
+    path: String!
+}
+
+type Product {
+    skuId: ID!
+    name: String!
+    description: String!
+    price: Float!
+    category: [String!]!
+    user: ProductOwner!
+    images: [Image]!
+}
+
+type CustomReview {
+    skuId: ID!
+    review: Review!
+}
+
+type Review {
+    _id: ID!
+    title: String!
+    comment: String!
+    updatedAt: String!
+}
+
+input FileProps {
+    assetId: String!
+    path: String
+}
+
+input ProductInput {
+    skuId: ID
+    name: String!
+    description: String!
+    price: Float!
+    userId: String!
+    # files: [Upload]!
+    files: [FileProps]!
+    category: [String]!
+}
+
+input RegisterData {
+    username: String!
+    password: String!
+    email: String!
+    role: [String!]!
+}
+
+input AddReviewInput {
+    title: String!
+    comment: String!
+}

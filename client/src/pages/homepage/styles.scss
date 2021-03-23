@@ -1,0 +1,125 @@
+@import url('https://fonts.googleapis.com/css2?family=Lobster+Two:ital,wght@1,700&display=swap');
+
+
+.homepage-wrapper {
+
+    .homepage-inner-content {
+
+        .category-header {
+            font-weight: 900;
+            font-size: 28px;
+            text-align: center;
+        }
+
+        .banner-section {
+            background-image: url('../../assets/img/homepage-banner.jpg');
+            background-size: cover;
+            width: 100vw;
+            height: 100vh;
+            position: relative;
+
+            .message-section {
+                position: absolute;
+                width: 560px;
+                top: 25%;
+                left: 10%;
+                font-family: 'Lobster Two', cursive;
+
+
+                .message {
+                    font-size: 90px;
+                    color: rgb(117, 117, 117);
+                }
+
+
+                .button-group {
+                    padding: 30px;
+                    width: 260px;
+
+                    .start-button {
+                        display: flex;
+                        justify-content: center;
+                        
+                        font-size: 24px;
+                        border: solid 3px black;
+                        border-radius: 30px;
+                        
+                        user-select: none;
+                        animation: GradientBorder 3s ease infinite;
+                    }
+                }
+            }
+
+        }
+
+        .features {
+            display: flex;
+            padding: 50px 15px;
+            flex-direction: column;
+
+            .detail {
+                display: flex;
+                padding: 30px;
+
+
+
+                div[class$="-section"] {
+                    padding: 10px;
+                    cursor: pointer;
+
+                    .sub-header {
+                        font-size: larger;
+                        font-weight: 800;
+                    }
+                }
+
+                .food-section {
+                    width: 50%;
+                    transition: 0.5s;
+
+                    &:hover {
+                        width: 80%;
+                    }
+
+                    img {
+                        width: 100%;
+                    }
+                }
+
+                .clothing-section {
+                    img {
+                        width: 98%;
+                    }
+                }
+
+                .image-wrapper {
+                    width: 100%;
+                    height: 100%;
+                }
+            }
+        }
+
+    }
+}
+
+/* 
+.css-selector {
+    background: linear-gradient(99deg, #433fe1, #ce51f3);
+    background-size: 400% 400%;
+
+    animation: GradientBorder;
+}
+
+@keyframes GradientBorder {
+    0% {
+        border-color: 71% 0%
+    }
+
+    50% {
+        border-color: 30% 100%
+    }
+
+    100% {
+        border-color: 71% 0%
+    }
+} */

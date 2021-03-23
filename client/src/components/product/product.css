@@ -1,0 +1,79 @@
+.product-item {
+  box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.3);
+  border-radius: 30px;
+  width: 300px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 25px;
+  margin: 25px 15px;
+}
+.product-item.replacement {
+  visibility: hidden;
+}
+.product-item .product-inner-wrapper {
+  display: flex;
+  flex-direction: column;
+  height: 400px;
+  position: relative;
+  width: 100%;
+}
+.product-item .product-inner-wrapper .image {
+  width: 100%;
+  height: 170px;
+  display: flex;
+  justify-content: center;
+}
+.product-item .product-inner-wrapper .image img {
+  width: 100%;
+}
+.product-item .product-inner-wrapper .buttons-group > div {
+  padding: 10px 0px;
+}
+.product-item .product-inner-wrapper .buttons-group .buttons {
+  display: flex;
+  justify-content: space-between;
+}
+.product-item .product-inner-wrapper .buttons-group .seller-info-wrapper {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  color: #999;
+}
+.product-item .product-inner-wrapper .buttons-group .seller-info-wrapper .store-icon {
+  width: 15px;
+  height: 15px;
+  overflow: hidden;
+  background-image: url("../../assets/img/sprite.png");
+  background-position-x: -126px;
+  margin-right: 12px;
+}
+.product-item .product-inner-wrapper .buttons-group .seller-info-wrapper .seller-name {
+  cursor: pointer;
+}
+.product-item .product-inner-wrapper .buttons-group .seller-info-wrapper:hover {
+  color: green;
+  text-decoration: underline;
+}
+.product-item .product-inner-wrapper .buttons-group .seller-info-wrapper:hover .store-icon {
+  background-position-x: -111px;
+}
+.product-item .info-section {
+  height: 110px;
+}
+.product-item .info-section .text {
+  display: flex;
+  align-items: center;
+}
+.product-item .info-section .text .name {
+  flex-grow: 1;
+  font-size: 21px;
+  height: auto;
+}
+.product-item .info-section .text .description {
+  min-height: 150px;
+}
+.product-item .info-section .price {
+  font-size: 24px;
+  font-style: italic;
+}

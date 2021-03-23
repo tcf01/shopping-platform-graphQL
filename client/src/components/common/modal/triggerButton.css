@@ -1,0 +1,18 @@
+.login-button-wrapper {
+  cursor: pointer;
+}
+.login-button-wrapper .inner-wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 125px;
+}
+.login-button-wrapper .inner-wrapper .text {
+  font-size: 24px;
+}
+.login-button-wrapper .inner-wrapper .trigger-button {
+  width: 30px;
+}
+.login-button-wrapper .inner-wrapper .trigger-button svg {
+  fill: white;
+}
